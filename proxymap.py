@@ -24,13 +24,13 @@ example: python proxymap.py --proxy http://192.168.54.49:3128 --url http://examp
  
 
     def createproxy(proxy_url):
-        proxy = { "http": args.proxy, }
+        proxy = {"http":args.proxy}
         try: 
-            requests.get("http://google.com", proxies=proxy, timeout=...)
+            requests.get("http://google.com", proxies=proxy, timeout=30)
         except:
             raise SystemExit("[-] Unable to reach the proxy, try: http://<proxy ip>:<port>")
         else:
-            return { "http": args.proxy, }
+            return {"http":args.proxy}
 
     def formatports(ports):
         if re.match(r"^(?:(?:6553[0-5]|655[0-2]\d|65[0-4]\d{2}|6[0-4]\d{3}|[1-5]\d{4}|[1-9]\d{0,3}|0)-(?:6553[0-5]|655[0-2]\d|65[0-4]\d{2}|6[0-4]\d{3}|[1-5]\d{4}|[1-9]\d{0,3}|0))$", ports):
