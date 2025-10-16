@@ -86,7 +86,7 @@ example: python proxymap.py --proxy http://192.168.54.49:3128 --url http://examp
             try:
                 resp = requests.head(f'{target_url}:{int(p)}', proxies=proxy_url, timeout=5)
                 if resp.status_code == 200:
-                    return f"http://{target_url}:{int(p)} | Status Code [{resp.status_code}]"
+                    return f"{target_url}:{int(p)} | Status Code [{resp.status_code}]"
             except requests.RequestException:
                 return None
             return None
