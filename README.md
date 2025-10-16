@@ -1,5 +1,5 @@
 ### Proxymap
-Originally built for the "Squid" proving grounds lab, Proxymap is a lightweight port scanner that uses open HTTP proxies to check internal ports via the application layer, without relying on raw socket access like tools such as nmap do.
+Originally built for the "Squid" proving grounds lab, Proxymap is a lightweight port scanner that abuses open HTTP proxies to check internal ports via the application layer, without relying on raw socket access like tools such as nmap do.
 
 ![Alt Text](images/proxymapexample.gif)
 
